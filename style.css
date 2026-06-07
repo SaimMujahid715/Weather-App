@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(5,10,30,.6),rgba(5,10,30,.8)),
+    url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b");
+    
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.weather-container{
+    width:100%;
+    max-width:450px;
+}
+
+.search-box{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.input{
+    flex:1;
+    padding:16px 20px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(15px);
+
+    color:white;
+    font-size:16px;
+    font-weight:500;
+
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.input::placeholder{
+    color:rgba(255,255,255,.7);
+}
+
+.button{
+    width:60px;
+    border:none;
+    border-radius:18px;
+    cursor:pointer;
+    font-size:20px;
+
+    background:linear-gradient(
+    135deg,
+    #38bdf8,
+    #6366f1
+    );
+
+    color:white;
+
+    transition:.3s;
+}
+
+.button:hover{
+    transform:translateY(-3px);
+}
+
+.weather-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:30px;
+    padding:35px;
+
+    text-align:center;
+    color:white;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.4),
+    0 0 30px rgba(56,189,248,.15);
+}
+
+.weather-card h2{
+    font-size:28px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.weather-card h3{
+    font-size:20px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.weather-card img{
+    width:140px;
+    margin:15px 0;
+    filter:drop-shadow(0 0 20px rgba(255,255,255,.4));
+}
+
+.weather-card h1{
+    font-size:5rem;
+    line-height:1;
+    font-weight:700;
+
+    background:linear-gradient(
+    135deg,
+    #ffffff,
+    #38bdf8
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.weather-card p{
+    font-size:20px;
+    color:#dbeafe;
+    margin-top:10px;
+}
+
+.details{
+    display:flex;
+    gap:15px;
+    margin-top:30px;
+}
+
+.detail-box{
+    flex:1;
+    padding:18px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.detail-box:hover{
+    transform:translateY(-5px);
+}
+
+.detail-box h3{
+    color:#38bdf8;
+    font-size:24px;
+    margin-bottom:5px;
+}
+
+.detail-box span{
+    color:#cbd5e1;
+    font-size:14px;
+}
+.date{
+    color:#cbd5e1;
+    font-size:14px;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+@media (max-width: 768px) {
+    .weather-container {
+        max-width: 90%;
+    }
+
+    .weather-card {
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .weather-card h1 {
+        font-size: 3.5rem;
+    }
+
+    .weather-card h2 {
+        font-size: 22px;
+    }
+
+    .weather-card h3 {
+        font-size: 18px;
+    }
+
+    .weather-card img {
+        width: 110px;
+    }
+
+    .details {
+        gap: 10px;
+    }
+
+    .detail-box {
+        padding: 14px;
+    }
+
+    .detail-box h3 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .search-box {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .input {
+        padding: 14px 16px;
+        font-size: 15px;
+        border-radius: 14px;
+    }
+
+    .button {
+        width: 55px;
+        border-radius: 14px;
+        font-size: 18px;
+    }
+
+    .weather-card {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .weather-card h1 {
+        font-size: 2.8rem;
+    }
+
+    .weather-card h2 {
+        font-size: 20px;
+    }
+
+    .weather-card h3 {
+        font-size: 16px;
+    }
+
+    .weather-card img {
+        width: 95px;
+    }
+
+    .weather-card p {
+        font-size: 16px;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .detail-box {
+        padding: 14px;
+    }
+
+    .detail-box h3 {
+        font-size: 18px;
+    }
+
+    .detail-box span {
+        font-size: 13px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+}

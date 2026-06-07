@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-container">
+<form onsubmit="WeatherApp(event)">
+    <div class="search-box">
+        
+        <input type="text" placeholder="Enter city name" id="CityName" class="input">
+        <button type="submit" class="button">🔍</button>
+        
+    </div>
+</form>
+
+        <div class="weather-card">
+            <div class="date" id="date"></div>
+            <h2 id="city-result"></h2>
+            <h3 id="region-result"></h3>
+            <img id="img-icon">
+            <h1 id="temp-result"></h1>
+            <p id="status-result"></p>
+
+            <div class="details">
+                <div class="detail-box">
+                    <h3 id="humidity-result"></h3>
+                    <span>Humidity</span>
+                </div>
+
+                <div class="detail-box">
+                    <h3 id="wind-result"></h3>
+                    <span>Wind</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.17.0/dist/axios.min.js"></script>
+
+
+</body>
+</html>
