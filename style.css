@@ -209,73 +209,217 @@ body{
         font-size: 20px;
     }
 }
+/* ======================
+   HEADER
+====================== */
+/* ======================
+   HEADER
+====================== */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    text-align:center;
+    color:white;
+
+    padding:20px 10px;
+
+    background:rgba(0,0,0,.15);
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.header h1{
+    font-size:2rem;
+    margin-bottom:5px;
+}
+
+.header p{
+    font-size:14px;
+    opacity:.8;
+}
+.weather-container{
+    width:100%;
+    max-width:450px;
+    margin-top:120px;
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+
+.footer{
+    position:fixed;
+    bottom:10px;
+    left:0;
+    width:100%;
+
+    text-align:center;
+    color:white;
+    font-size:13px;
+    opacity:.8;
+}
+/* ======================
+   WELCOME SCREEN
+====================== */
+
+#welcome-screen{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:#050a1e;
+    color:white;
+
+    z-index:9999;
+
+    animation:hideWelcome 4s forwards;
+}
+
+#welcome-screen h1{
+    font-size:2rem;
+    text-align:center;
+    animation:floatText 2s ease-in-out infinite;
+}
+
+#welcome-screen p{
+    margin-top:10px;
+    opacity:.8;
+}
+
+@keyframes floatText{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes hideWelcome{
+    0%,80%{
+        opacity:1;
+        visibility:visible;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
 
 /* Mobile phones */
-@media (max-width: 480px) {
-    body {
-        padding: 12px;
+
+@media (max-width:480px){
+
+    body{
+        padding:12px;
     }
 
-    .search-box {
-        flex-direction: row;
-        gap: 10px;
+    .header{
+        padding:15px 10px;
     }
 
-    .input {
-        padding: 14px 16px;
-        font-size: 15px;
-        border-radius: 14px;
+    .header h1{
+        font-size:1.4rem;
     }
 
-    .button {
-        width: 55px;
-        border-radius: 14px;
-        font-size: 18px;
+    .header p{
+        font-size:12px;
     }
 
-    .weather-card {
-        padding: 20px;
-        border-radius: 22px;
+    .weather-container{
+        max-width:95%;
+        margin-top:110px;
     }
 
-    .weather-card h1 {
-        font-size: 2.8rem;
+    .search-box{
+        gap:10px;
     }
 
-    .weather-card h2 {
-        font-size: 20px;
+    .input{
+        padding:14px 16px;
+        font-size:15px;
+        border-radius:14px;
     }
 
-    .weather-card h3 {
-        font-size: 16px;
+    .button{
+        width:55px;
+        border-radius:14px;
+        font-size:18px;
     }
 
-    .weather-card img {
-        width: 95px;
+    .weather-card{
+        padding:20px;
+        border-radius:22px;
     }
 
-    .weather-card p {
-        font-size: 16px;
+    .weather-card h1{
+        font-size:2.8rem;
     }
 
-    .details {
-        flex-direction: column;
-        gap: 12px;
+    .weather-card h2{
+        font-size:20px;
     }
 
-    .detail-box {
-        padding: 14px;
+    .weather-card h3{
+        font-size:16px;
     }
 
-    .detail-box h3 {
-        font-size: 18px;
+    .weather-card img{
+        width:95px;
     }
 
-    .detail-box span {
-        font-size: 13px;
+    .weather-card p{
+        font-size:16px;
     }
 
-    .date {
-        font-size: 12px;
+    .details{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .detail-box{
+        padding:14px;
+    }
+
+    .detail-box h3{
+        font-size:18px;
+    }
+
+    .detail-box span{
+        font-size:13px;
+    }
+
+    .date{
+        font-size:12px;
+    }
+
+    .footer{
+        font-size:11px;
+        padding:0 10px;
+    }
+
+    #welcome-screen h1{
+        font-size:1.4rem;
+        padding:0 20px;
+    }
+
+    #welcome-screen p{
+        font-size:13px;
+        padding:0 20px;
+        text-align:center;
     }
 }
