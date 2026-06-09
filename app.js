@@ -20,7 +20,7 @@ async function WeatherApp (event){
     let response = await axios(`https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`,);
     
     
-  // Collects Output 
+  //  Output 
      CityDiv.innerHTML = response.data.location.name;
      TempDiv.innerHTML = response.data.current.temp_c + "°C";
      HumidityDiv.innerHTML = response.data.current.humidity + "%";
