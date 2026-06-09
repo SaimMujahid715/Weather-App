@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>🌦️Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="weather-container">
-<form onsubmit="WeatherApp(event)">
-    <div class="search-box">
-        
-        <input type="text" placeholder="Enter city name" id="CityName" class="input">
-        <button type="submit" class="button">🔍</button>
-        
+    <!-- Welcome Animation -->
+    <div id="welcome-screen">
+        <h1>🌦️ Welcome to SkyCast Weather App</h1>
+        <p>Get real-time weather updates from around the world</p>
     </div>
-</form>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>🌤️ SkyCast Weather App</h1>
+        <p>Created by Saim Mujahid</p>
+    </header>
+
+    <div class="weather-container">
+
+        <form onsubmit="WeatherApp(event)">
+            <div class="search-box">
+                <input type="text" placeholder="Enter city name" id="CityName" class="input">
+                <button type="submit" class="button">🔍</button>
+            </div>
+        </form>
 
         <div class="weather-card">
             <div class="date" id="date"></div>
@@ -41,7 +52,15 @@
 
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 SkyCast Weather App | Developed by Saim Mujahid</p>
+    </footer>
 
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.17.0/dist/axios.min.js"></script>
+
+</body>
 
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.17.0/dist/axios.min.js"></script>
