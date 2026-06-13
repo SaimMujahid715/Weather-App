@@ -17,7 +17,7 @@ let ImgTag = document.querySelector("#img-icon")
 async function WeatherApp (event){
     let city = document.querySelector("#CityName").value;
     event.preventDefault();
-    let response = await axios(`https://api.weatherapi.com/v1/current.json?key=25175e31b7074cfc895204529222906&q=${city}`,);
+    let response = await axios(`https://api.weatherapi.com/v1/current.json?key=6fd08f88d1d44f5fbd3110100260706&q=${city}`,);
     
     
   //  Output 
