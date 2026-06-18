@@ -254,7 +254,7 @@ body{
 
 
 .footer{
-    position:fixed;
+    position: fixed;
     bottom:10px;
     left:0;
     width:100%;
@@ -267,6 +267,43 @@ body{
 /* ======================
    WELCOME SCREEN
 ====================== */
+
+.loading{
+    display:none;
+
+    width:fit-content;
+    margin:0 auto 20px auto;
+
+    padding:12px 20px;
+
+    text-align:center;
+    color:white;
+    font-size:15px;
+    font-weight:500;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,.15);
+
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        opacity:.7;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:.7;
+    }
+}
 
 #welcome-screen{
     position:fixed;
