@@ -16,26 +16,40 @@ let msg = document.querySelector("#loading");
 async function WeatherApp(event) {
   let city = document.querySelector("#CityName").value;
   event.preventDefault();
-
+try {
   //loading msg
-  msg.style.display = "block"
-
+  msg.style.display = "block";
 
   let response = await axios(
     `https://api.weatherapi.com/v1/current.json?key=6fd08f88d1d44f5fbd3110100260706&q=${city}`,
   );
-  
-
-  msg.style.display = "none"
-
 
   //  Output
+
+
   CityDiv.innerHTML = response.data.location.name;
   TempDiv.innerHTML = response.data.current.temp_c + "°C";
   HumidityDiv.innerHTML = response.data.current.humidity + "%";
   WindDiv.innerHTML = response.data.current.wind_kph + " Km/h";
-  RegionDiv.innerHTML =response.data.location.region + ", " + response.data.location.country;
+  RegionDiv.innerHTML =
+    response.data.location.region + ", " + response.data.location.country;
   StatusDiv.innerHTML = response.data.current.condition.text;
   ImgTag.src = response.data.current.condition.icon;
-  
+
+
+} catch (error) {
+
+
+  CityDiv.innerHTML = " ❌ City Not Found, <br> Enter A Valid City Name";
+  TempDiv.innerHTML = ""
+  HumidityDiv.innerHTML = "" 
+  WindDiv.innerHTML = ""
+  RegionDiv.innerHTML = ""
+  StatusDiv.innerHTML = ""
+  ImgTag.src = 
+  msg.innerHTML = ""
+
+}finally{
+  loading.style.display = "none"
+}
 }
